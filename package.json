@@ -1,0 +1,12 @@
+{
+  "name": "atom-grails",
+  "version": "0.0.0",
+  "description": "Grails framework support for Atom",
+  "repository": "https://github.com/atom/atom-grails",
+  "license": "Apache v2.0",
+  "engines": {
+    "atom": ">=0.50.0"
+  },
+  "dependencies": {
+  }
+}
