@@ -91,10 +91,7 @@
     'body': '<g:${1:name} ${2:attr}="${3:value}" />'
   'New tag.. <g: ></g:>':
     'prefix': 'g:'
-    'body': '<g:${1:name} ${2:attr}="${3:value}">${0:$TM_SELECTED_TEXT}</g:$1>'
-  'out << ""':
-    'prefix': 'out'
-    'body': 'out << "${1:output}"'
+    'body': '<g:${1:name} ${2:attr}="${3:value}">$0</g:$1>'
 '.source.groovy':
   'New Controller':
     'prefix': 'cont'
@@ -189,6 +186,9 @@
   'render(view:"..", model:m)':
     'prefix': 'rvm'
     'body': 'render(view:"${1:name}", model:[${2:name}:${3:obj}])'
+  'out << ""':
+    'prefix': 'out'
+    'body': 'out << "${1:output}"'
 '.source.groovy.embedded.html.grails':
   'g.message()':
     'prefix': 'msg'
