@@ -6,9 +6,12 @@
 'name': 'Grails Server Page'
 'patterns': [
   {
-    'begin': '<%--+(?!>)=?'
-    'contentName': 'comment.block'
+    'begin': '<%--'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.gsp'
     'end': '--%>'
+    'name': 'comment.block.gsp'
   }
   {
     'begin': '<%+(?!>)=?'
