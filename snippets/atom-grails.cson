@@ -86,6 +86,24 @@
   '<g:while>':
     'prefix': 'while'
     'body': '<g:while test="\\${$1}">\n\t$0\n</g:while>\n'
+  '<asset:javascript src="..">':
+    'prefix': 'assetJs'
+    'body': '<asset:javascript src="${1:application.js}" />'
+  '<asset:stylesheet href="..">':
+    'prefix': 'assetCss'
+    'body': '<asset:stylesheet href="${1:application.css}" />'
+  '<asset:image src="..">':
+    'prefix': 'assetImage'
+    'body': '<asset:image src="${1:image.png}" />'
+  '<asset:script>':
+    'prefix': 'assetScript'
+    'body': '<asset:script type="${1:text/javascript}">\n\t$0\n</asset:script>\n'
+  '<asset:assetPathExists>':
+    'prefix': 'assetPathExists'
+    'body': '<asset:assetPathExists src="${1:test.js}">\n\t$0\n</asset:assetPathExists>\n'
+  '<asset:deferredScripts>':
+    'prefix': 'assetDeferred'
+    'body': '<asset:deferredScripts />'
   'New short tag.. <g: />':
     'prefix': 'g:>'
     'body': '<g:${1:name} ${2:attr}="${3:value}" />'
