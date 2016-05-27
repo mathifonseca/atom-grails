@@ -1,70 +1,70 @@
 '.text.html.grails':
   '<g:checkBox>':
-    'prefix': 'input'
-    'body': '<g:checkBox name="${1:name}" value="${2:true}" />'
+    'prefix': 'checkBox'
+    'body': '<g:checkBox name="${1:name}" value="\\${${2:true}}" />'
   '<g:createLink>':
-    'prefix': 'createlink'
-    'body': '<g:createLink ${1:action="$2" }${3:controller="$4" }${5:id="$6" }${7:params="$8" }${9:url="$10" }${11:absolute="$12" }${13:base="$14" }>$15</g:createLink>'
+    'prefix': 'createLink'
+    'body': '<g:createLink ${1:action="$2" }${3:controller="$4" }${5:id="$6" }${7:params="$8" }${9:url="$10" }${11:absolute="$12" }${13:base="$14"}>$15</g:createLink>'
   '<g:createLinkTo>':
-    'prefix': 'createlinkto'
-    'body': '<g:createLinkTo ${1:dir="$2" }${3:file="$4" }${5:absolute="$6" }${7:base="$8" } />'
+    'prefix': 'createLinkTo'
+    'body': '<g:createLinkTo ${1:dir="$2" }${3:file="$4" }${5:absolute="$6" }${7:base="$8"} />'
   '<g:currencySelect ..>':
-    'prefix': 'select'
+    'prefix': 'currencySelect'
     'body': '<g:currencySelect name="${1:currencyName}" value="\\${${2:currency}}" />'
   '<g:each in=".." var="e" status="i">':
     'prefix': 'eavs'
-    'body': '<g:each in="\\${${1:item}}" var="${2:e}" status="${3:i}">\n\t${0:$TM_SELECTED_TEXT}\n</g:each>'
+    'body': '<g:each in="\\${${1:item}}" var="${2:e}" status="${3:i}">\n\t$0\n</g:each>'
   '<g:each in=".." var="i">':
     'prefix': 'eav'
-    'body': '<g:each in="\\${${1:item}}" var="${2:i}">\n\t${0:$TM_SELECTED_TEXT}\n</g:each>'
+    'body': '<g:each in="\\${${1:item}}" var="${2:i}">\n\t$0\n</g:each>'
   '<g:each in="..">':
     'prefix': 'ea'
-    'body': '<g:each in="\\${${1:item}}">\n\t${0:$TM_SELECTED_TEXT}\n</g:each>'
+    'body': '<g:each in="\\${${1:item}}">\n\t$0\n</g:each>'
   '<g:each>':
     'prefix': 'each'
-    'body': '<g:each ${1:var="${2}" }in="\\${$3}">\n\t${0:$TM_SELECTED_TEXT}\n</g:each>'
+    'body': '<g:each ${1:var="${2}" }in="\\${$3}">\n\t$0\n</g:each>'
   '<g:else>':
     'prefix': 'else'
-    'body': '<g:else>\n\t${0:$TM_SELECTED_TEXT}\n</g:else>'
+    'body': '<g:else>\n\t$0\n</g:else>'
   '<g:elseif>':
     'prefix': 'elseif'
-    'body': '<g:elseif test="\\${$1}">\n\t${0:$TM_SELECTED_TEXT}\n</g:elseif>'
+    'body': '<g:elseif test="\\${$1}">\n\t$0\n</g:elseif>'
   '<g:field type="..">':
-    'prefix': 'input'
-    'body': '<g:field type="${1:type}" name="${2:name}" value="${3:someValue}" />'
+    'prefix': 'field'
+    'body': '<g:field type="${1:type}" name="${2:name}" value="\\${${3:value}}" />'
   '<g:form action="..">':
     'prefix': 'form'
-    'body': '<g:form name="${1:name}" action="${2:action}">\n\t${0:$TM_SELECTED_TEXT}\n</g:form>'
+    'body': '<g:form name="${1:name}" action="${2:action}">\n\t$0\n</g:form>'
   '<g:form controller=".." action=".."> ':
-    'prefix': 'form'
-    'body': '<g:form name="${1:name}" controller="${2:controller}" action="${3:action}">\n\t${0:$TM_SELECTED_TEXT}\n</g:form>'
+    'prefix': 'formc'
+    'body': '<g:form name="${1:name}" controller="${2:controller}" action="${3:action}">\n\t$0\n</g:form>'
   '<g:hasErrors>':
-    'prefix': 'haserrors'
-    'body': '<g:hasErrors ${1:bean="$2" }${3:model="$4" }${5:field="$6" }>\n\t$0\n</g:hasErrors>\n'
+    'prefix': 'hasErrors'
+    'body': '<g:hasErrors ${1:bean="$2" }${3:model="$4" }${5:field="$6"}>\n\t$0\n</g:hasErrors>\n'
   '<g:hiddenField>':
-    'prefix': 'input'
-    'body': '<g:hiddenField name="${1:name}" value="${2:someValue}" />'
+    'prefix': 'hidden'
+    'body': '<g:hiddenField name="${1:name}" value="\\${${2:value}}" />'
   '<g:if>':
     'prefix': 'if'
-    'body': '<g:if test="\\${$1}">\n\t${0:$TM_SELECTED_TEXT}\n</g:if>\n'
+    'body': '<g:if test="\\${$1}">\n\t$0\n</g:if>\n'
   '<g:javascript library="..">':
     'prefix': 'jsl'
     'body': '<g:javascript library="${1:prototype}" />'
   '<g:javascript>':
     'prefix': 'js'
-    'body': '<g:javascript>\n\t${0:$TM_SELECTED_TEXT}\n</g:javascript>'
+    'body': '<g:javascript>\n\t$0\n</g:javascript>'
   '<g:link>':
     'prefix': 'link'
-    'body': '<g:link ${1:action="$2" }${3:controller="$4" }${5:id="$6" }${7:params="$8" }${9:url="$10" }${11:absolute="$12" }${13:base="$14" }>$15</g:link>'
+    'body': '<g:link ${1:action="$2" }${3:controller="$4" }${5:id="$6" }${7:params="$8" }${9:url="$10" }${11:absolute="$12" }${13:base="$14"}>$15</g:link>'
   '<g:localeSelect ..>':
-    'prefix': 'select'
+    'prefix': 'localeSelect'
     'body': '<g:localeSelect name="${1:localeName}" value="\\${${2:request.locale}}" />'
   '<g:message>':
     'prefix': 'msg'
-    'body': '<g:message code="${1}"${2: args="${3}"}${4: default="${5}"}/>$0'
+    'body': '<g:message code="${1}"${2: args="[${3}]"}${4: default="${5}"}/>$0'
   '<g:radio> ':
-    'prefix': 'input'
-    'body': '<g:radio name="${1:name}" value="${2:true}" checked="${3:true}" />'
+    'prefix': 'radio'
+    'body': '<g:radio name="${1:name}" value="\\${${2:true}}" checked="${3:true}" />'
   '<g:render>':
     'prefix': 'render'
     'body': '<g:render ${1:template="$2" }${3:bean="$4" }${5:model="$6" }${7:collection="$8" }${9:var="$10" }${11:plugin="$12" }/>'
@@ -73,19 +73,19 @@
     'body': '<g:select name="${1:name}" value="\\${${2:value}}" from="\\${${3:[1,2,3]}}" />'
   '<g:set>':
     'prefix': 'set'
-    'body': '<g:set ${1:var="$2" }${3:value="$4" }${5:scope="${6:request/page/flash/session}" }/>'
+    'body': '<g:set ${1:var="$2"} value="\\${${3:value}}" />'
   '<g:submitButton>':
-    'prefix': 'input'
+    'prefix': 'submit'
     'body': '<g:submitButton name="${1:name}" value="${2:someValue}" />'
   '<g:textField>':
-    'prefix': 'input'
+    'prefix': 'textField'
     'body': '<g:textField name="${1:name}" value="${2:someValue}" />'
-  '<g:timeZoneSelect ..>':
-    'prefix': 'select'
+  '<g:timeZoneSelect>':
+    'prefix': 'timeZoneSelect'
     'body': '<g:timeZoneSelect name="${1:selectName}" value="\\${${2:tz}}" />'
   '<g:while>':
     'prefix': 'while'
-    'body': '<g:while test="\\${$1}">\n\t${0:$TM_SELECTED_TEXT}\n</g:while>\n'
+    'body': '<g:while test="\\${$1}">\n\t$0\n</g:while>\n'
   'New short tag.. <g: />':
     'prefix': 'g:>'
     'body': '<g:${1:name} ${2:attr}="${3:value}" />'
