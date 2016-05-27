@@ -110,6 +110,141 @@
   'New tag.. <g: ></g:>':
     'prefix': 'g:'
     'body': '<g:${1:name} ${2:attr}="${3:value}">$0</g:$1>'
+  '<g:textArea>':
+    'prefix': 'textArea'
+    'body': '<g:textArea name="${1:name}" value="\\${${2:value}}" rows="${3:5}" cols="${4:40}" />'
+  '<g:actionSubmit>':
+    'prefix': 'actionSubmit'
+    'body': '<g:actionSubmit value="${1:Some update label}" action="${2:update}" />'
+  '<g:actionSubmitImage>':
+    'prefix': 'actionSubmitImage'
+    'body': '<g:actionSubmitImage value="${1:Some update label}" action="${2:update}" src="${3:image.png}" />'
+  '<g:applyLayout template="..">':
+    'prefix': 'applyLayoutTemplate'
+    'body': '<g:applyLayout name="${1:name}" template="${2:template}" params="[${3:books : books}]" />'
+  '<g:applyLayout url="..">':
+    'prefix': 'applyLayoutUrl'
+    'body': '<g:applyLayout name="${1:name}" url="${2:url}" />'
+  '<g:applyLayout></g:applyLayout>':
+    'prefix': 'applyLayout'
+    'body': '<g:applyLayout name="${1:name}">\n\t$0\n</g:applyLayout>\n'
+  '<g:collect>':
+    'prefix': 'collect'
+    'body': '<g:collect in="\\${${1:list}}" expr="${2:it.name}">\n\t$0\n</g:collect>\n'
+  '<g:cookie>':
+    'prefix': 'cookie'
+    'body': '<g:cookie name="${1:name}" />'
+  '<g:country>':
+    'prefix': 'country'
+    'body': '<g:country code="${1:ury}" />'
+  '<g:countrySelect>':
+    'prefix': 'countrySelect'
+    'body': '<g:countrySelect name="${1:name}" value="\\${${2:country}}" ${3:noSelection="[\'\':\'-Choose your country-\']"} />'
+  '<g:countrySelect from="[..]">':
+    'prefix': 'countrySelectFrom'
+    'body': '<g:countrySelect name="${1:name}" from="\\${${2:list}}" value="\\${${3:country}}" />'
+  '<g:datePicker>':
+    'prefix': 'datePicker'
+    'body': '<g:datePicker name="${1:name}" value="\\${${2:new Date()}}" ${3:noSelection="[\'\':\'-Choose-\']"} />'
+  '<g:eachError>':
+    'prefix': 'eachError'
+    'body': '<g:eachError bean="\\${${1:bean}}"${2: field="${3:name}"}>\n\t$0\n</g:eachError>\n'
+  '<g:external dir=".." file="..">':
+    'prefix': 'externalFile'
+    'body': '<g:external dir="$1" file="$2" ${3:type="$4" }/>'
+  '<g:external uri="..">':
+    'prefix': 'externalUri'
+    'body': '<g:external uri="${1:/images/$0}" />'
+  '<g:fieldError>':
+    'prefix': 'fieldError'
+    'body': '<g:fieldError bean="\\${$1}" field="$2" />'
+  '<g:fieldValue>':
+    'prefix': 'fieldValue'
+    'body': '<g:fieldValue bean="\\${$1}" field="$2" />'
+  '<g:findAll>':
+    'prefix': 'findAll'
+    'body': '<g:findAll in="\\${${1:list}}" expr="${2:it.name == \'something\'}">\n\t$0\n</g:findAll>\n'
+  '<g:formatBoolean>':
+    'prefix': 'formatBoolean'
+    'body': '<g:formatBoolean boolean="\\${${1:value}}" ${2:true="${3:True!}" false="${4:False!}" }/>'
+  '<g:formatDate>':
+    'prefix': 'formatDate'
+    'body': '<g:formatDate date="\\${${1:value}}" ${2:type="${3:datetime}" }${4:style="${5:LONG}" }${6:timeStyle="${7:SHORT}" }/>'
+  '<g:formatNumber>':
+    'prefix': 'formatNumber'
+    'body': '<g:formatNumber number="\\${${1:value}}" ${2:format="${3:\\$###,##0}" }/>'
+  '<g:formatNumber type="currency">':
+    'prefix': 'formatCurrency'
+    'body': '<g:formatNumber number="\\${${1:value}}" type="currency" currencyCode="${2:UYU}" />'
+  '<g:grep>':
+    'prefix': 'grep'
+    'body': '<g:grep in="\\${${1:list.language}}" filter="${2:~/.*Groovy.*/}">\n\t$0\n</g:grep>\n'
+  '<g:header>':
+    'prefix': 'header'
+    'body': '<g:header name="${1:Content-Type}" />'
+  '<g:img>':
+    'prefix': 'img'
+    'body': '<g:img ${1:dir="$2" }${3:file="$4" }${5:width="$6" height="$7"} />'
+  '<g:include>':
+    'prefix': 'include'
+    'body': '<g:include ${1:action="$2" }${3:controller="$4" }${5:id="$6" }${7:params="$8" }/>'
+  '<plugin:isAvailable>':
+    'prefix': 'isAvailable'
+    'body': '<plugin:isAvailable name="$1" ${2:version="$3" }/>'
+  '<plugin:isNotAvailable>':
+    'prefix': 'isNotAvailable'
+    'body': '<plugin:isNotAvailable name="$1" ${2:version="$3" }/>'
+  '<g:javascript src="..">':
+    'prefix': 'jssrc'
+    'body': '<g:javascript src="${1:script.js}" />'
+  '<g:join>':
+    'prefix': 'join'
+    'body': '<g:join in="[$1]" ${2:delimiter="$3" }/>'
+  '<g:layoutBody>':
+    'prefix': 'layoutBody'
+    'body': '<g:layoutBody />'
+  '<g:layoutHead>':
+    'prefix': 'layoutHead'
+    'body': '<g:layoutHead />'
+  '<g:layoutTitle>':
+    'prefix': 'layoutTitle'
+    'body': '<g:layoutTitle default="$1" />'
+  '<g:meta>':
+    'prefix': 'meta'
+    'body': '<g:meta name="${1:app.version}" />'
+  '<g:pageProperty>':
+    'prefix': 'pageProperty'
+    'body': '<g:pageProperty name="${1:page.title}" />'
+  '<g:paginate>':
+    'prefix': 'paginate'
+    'body': '<g:paginate ${1:controller="$2" }${3:action="$4" }${5:total="\\${$6\\}" }/>'
+  '<g:passwordField>':
+    'prefix': 'passwordField'
+    'body': '<g:passwordField name="$1" ${2:value="\\${$3\\}" }/>'
+  '<g:radioGroup> ':
+    'prefix': 'radioGroup'
+    'body': '<g:radioGroup name="${1:name}" values="[$2]" ${3:value="\\${$4\\}" }/>'
+  '<g:renderErrors>':
+    'prefix': 'renderErrors'
+    'body': '<g:renderErrors bean="\\${$1}" ${2:as="${3:list}" }${4:field="$5" }/>'
+  '<g:resource>':
+    'prefix': 'resource'
+    'body': '<g:resource dir="$1" file="$2" ${3:absolute="$4" }${5:base="$6" }/>'
+  '<g:sortableColumn>':
+    'prefix': 'sortableColumn'
+    'body': '<g:sortableColumn property="$1" title="$2" />'
+  '<g:unless>':
+    'prefix': 'unless'
+    'body': '<g:unless test="\\${$1}">\n\t$0\n</g:unless>\n'
+  '<g:unless env="..">':
+    'prefix': 'unlessEnv'
+    'body': '<g:unless test="\\${$1}" env="${2:production}">\n\t$0\n</g:unless>\n'
+  '<g:if env="..">':
+    'prefix': 'ifEnv'
+    'body': '<g:if test="\\${$1}" env="${2:production}">\n\t$0\n</g:if>\n'
+  '<g:uploadForm>':
+    'prefix': 'uploadForm'
+    'body': '<g:uploadForm name="$1" ${2:action="$3" }${4:controller="$5" }${6:id="$7" }>\n\t<input type="file" name="$8" />\n</g:uploadForm>\n'
 '.source.groovy':
   'New Controller':
     'prefix': 'cont'
