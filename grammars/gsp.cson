@@ -18,12 +18,10 @@
     'beginCaptures':
       '0':
         'name': 'punctuation.section.embedded.begin.groovy'
-    'end': '(%)>'
+    'end': '%>'
     'endCaptures':
       '0':
         'name': 'punctuation.section.embedded.end.groovy'
-      '1':
-        'name': 'source.groovy'
     'name': 'source.groovy'
     'patterns': [
       {
